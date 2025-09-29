@@ -9,9 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <a href="#home" class="visually-hidden-focusable">Skip to content</a>
     <div id="preloader" class="preloader">
       <div class="spinner"></div>
     </div>
@@ -23,7 +24,7 @@
             <span class="branch-name">Student Branch</span>
           </div>
         </div>
-        <nav>
+        <nav aria-label="Primary">
           <ul class="nav-links">
             <li><a href="#home" class="nav-link active">Home</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
@@ -31,8 +32,8 @@
             <li><a href="#achievements" class="nav-link">Achievements</a></li>
             <li><a href="#publications" class="nav-link">Publications</a></li>
             <li class="dropdown">
-              <button class="dropdown-toggle">Societies</button>
-              <div class="dropdown-menu">
+              <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="societiesMenu">Societies</button>
+              <div class="dropdown-menu" id="societiesMenu" role="menu">
                 <a href="#soc-comm">Communication Society</a>
                 <a href="#soc-comp">Computer Society</a>
                 <a href="#soc-sight">SIGHT</a>
@@ -42,7 +43,7 @@
             <li><button class="btn btn-secondary" id="openLogin">Login</button></li>
             <li><a href="#dashboard" class="btn btn-primary" id="openDashboard">Dashboard</a></li>
           </ul>
-          <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <button class="hamburger" id="hamburger" aria-label="Toggle navigation" type="button">
             <span></span><span></span><span></span>
           </button>
         </nav>
@@ -120,9 +121,9 @@
         <div class="container">
           <h2 class="section-title">Publications</h2>
           <div class="h-scroll">
-            <button class="scroll-btn left" aria-label="Scroll left" data-scroll-left>‹</button>
+            <button class="scroll-btn left" aria-label="Scroll left" data-scroll-left type="button">‹</button>
             <div class="h-scroll-track" id="publicationsTrack"></div>
-            <button class="scroll-btn right" aria-label="Scroll right" data-scroll-right>›</button>
+            <button class="scroll-btn right" aria-label="Scroll right" data-scroll-right type="button">›</button>
           </div>
         </div>
       </section>
@@ -213,8 +214,8 @@
           <div class="carousel" id="galleryCarousel">
             <div class="carousel-track" id="carouselTrack"></div>
             <div class="carousel-controls">
-              <button class="chip" id="carouselPrev" aria-label="Previous">‹</button>
-              <button class="chip" id="carouselNext" aria-label="Next">›</button>
+              <button class="chip" id="carouselPrev" aria-label="Previous" type="button">‹</button>
+              <button class="chip" id="carouselNext" aria-label="Next" type="button">›</button>
             </div>
           </div>
           <div id="galleryGrid" class="gallery-grid hover-zoom"></div>
@@ -339,7 +340,7 @@
 
     <div id="toast" class="toast hidden"></div>
 
-    <script src="../assets/js/app.js"></script>
+    <script src="js/app.js?v=tilt1" defer></script>
   </body>
   </html>
 
