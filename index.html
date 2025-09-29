@@ -119,7 +119,11 @@
       <section id="publications" class="section">
         <div class="container">
           <h2 class="section-title">Publications</h2>
-          <div class="cards three" id="publicationsGrid"></div>
+          <div class="h-scroll">
+            <button class="scroll-btn left" aria-label="Scroll left" data-scroll-left>‹</button>
+            <div class="h-scroll-track" id="publicationsTrack"></div>
+            <button class="scroll-btn right" aria-label="Scroll right" data-scroll-right>›</button>
+          </div>
         </div>
       </section>
 
@@ -147,6 +151,49 @@
         </div>
       </section>
 
+      <section id="sigs" class="section">
+        <div class="container">
+          <h2 class="section-title">Special Interest Groups (SIGs)</h2>
+          <div class="cards three">
+            <article class="card glass">
+              <h3>CompSoc</h3>
+              <p>A community passionate about CS, IT, and AI/ML. Projects, talks, and hack nights.</p>
+              <a href="#publications" class="btn btn-outline">Learn More</a>
+            </article>
+            <article class="card glass">
+              <h3>Diode</h3>
+              <p>Electronics and embedded systems: circuits, IoT, FPGA, and signal processing.</p>
+              <a href="#events" class="btn btn-outline">Learn More</a>
+            </article>
+            <article class="card glass">
+              <h3>Piston</h3>
+              <p>Mechanical and interdisciplinary engineering applications and competitions.</p>
+              <a href="#events" class="btn btn-outline">Learn More</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="stats" class="section">
+        <div class="container">
+          <h2 class="section-title">Stats</h2>
+          <div class="hero-stats">
+            <div class="stat-card glass">
+              <div class="stat-value" id="statMembers2">198</div>
+              <div class="stat-label">Members</div>
+            </div>
+            <div class="stat-card glass">
+              <div class="stat-value" id="statAlumni">146</div>
+              <div class="stat-label">Alumni</div>
+            </div>
+            <div class="stat-card glass">
+              <div class="stat-value" id="statEvents2">34</div>
+              <div class="stat-label">Events</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="events" class="section">
         <div class="container">
           <h2 class="section-title">Event Calendar</h2>
@@ -163,7 +210,14 @@
       <section id="gallery" class="section">
         <div class="container">
           <h2 class="section-title">Photo Gallery</h2>
-          <div id="galleryGrid" class="gallery-grid"></div>
+          <div class="carousel" id="galleryCarousel">
+            <div class="carousel-track" id="carouselTrack"></div>
+            <div class="carousel-controls">
+              <button class="chip" id="carouselPrev" aria-label="Previous">‹</button>
+              <button class="chip" id="carouselNext" aria-label="Next">›</button>
+            </div>
+          </div>
+          <div id="galleryGrid" class="gallery-grid hover-zoom"></div>
         </div>
       </section>
 
@@ -234,6 +288,34 @@
         </div>
       </div>
     </footer>
+
+    <section id="faqs" class="section">
+      <div class="container">
+        <h2 class="section-title">FAQs</h2>
+        <div class="accordion" id="faqList">
+          <div class="accordion-item glass">
+            <button class="accordion-header">How do I join the IEEE Student Branch?</button>
+            <div class="accordion-panel"><p>Click Join, create your member profile, and bring your IEEE ID.</p></div>
+          </div>
+          <div class="accordion-item glass">
+            <button class="accordion-header">Who can attend events?</button>
+            <div class="accordion-panel"><p>Most events are open to all students; member-only events are marked.</p></div>
+          </div>
+          <div class="accordion-item glass">
+            <button class="accordion-header">How do I become a volunteer?</button>
+            <div class="accordion-panel"><p>Reach out to the Team; we regularly onboard project volunteers.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="dock glass" id="dock">
+      <a href="#home" class="dock-item" data-dock>🏠<span>Home</span></a>
+      <a href="#events" class="dock-item" data-dock>📅<span>Events</span></a>
+      <a href="#publications" class="dock-item" data-dock>📚<span>Pubs</span></a>
+      <a href="#gallery" class="dock-item" data-dock>🖼️<span>Gallery</span></a>
+      <a href="#contact" class="dock-item" data-dock>✉️<span>Contact</span></a>
+    </nav>
 
     <div id="loginModal" class="modal hidden" aria-hidden="true">
       <div class="modal-backdrop" id="closeLogin"></div>
